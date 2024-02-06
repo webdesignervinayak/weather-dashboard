@@ -6,6 +6,7 @@ import { addChatMessages } from '../utils/chatSlice';
 const ChatBox = () => {
     const dispatch = useDispatch();
     const chatmessages = useSelector((store) => store.chat.chatmessages);
+    const [myMessage,setMyMessage] = useState("")
 
     useEffect(() => {
         const i = setInterval( () => {
@@ -31,8 +32,15 @@ const ChatBox = () => {
         </div>
         </div>
         <div>
-            <form className='w-64 h-24 border border-white rounded-b-lg flex' onSubmit={(e) => e.preventDefault()}>
+            <form className='w-64 h-24 border border-white rounded-b-lg flex' onSubmit={(e) => {
+                e.preventDefault()
+                dispatch(addChatMessages(myMessage))
+                setMyMessage('')
+                }
+                }>
                 <textarea rows="2" placeholder='Type your experience here'
+                onChange={(e) => setMyMessage(e.target.value)}
+                value = {myMessage}
                 className='m-2 p-2 rounded-md'/>
                 <button className='my-2 px-2 bg-blue-900 text-white rounded-md'>Send</button>
             </form>
