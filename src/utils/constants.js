@@ -2,6 +2,29 @@ export const API_KEY = "7f142b1dd2aaff9096d57b79a77f92aa"
 //dc77bed66631bbd5f4eca295653d6787
 //e360fd167170465ed33f81c83808cb54
 
+export const experiences = [
+  "I forgot my umbrella and got soaked in the rain on my way to work.",
+  "It was a beautiful sunny day, perfect for a picnic in the park.",
+  "I woke up to the sound of thunderstorms and heavy rain outside.",
+  "The snowstorm was so severe that all the roads were closed.",
+  "A rainbow appeared after the rain, brightening up the gloomy sky.",
+  "I had to shovel snow from the driveway for hours after the blizzard.",
+  "The heatwave made it unbearable to be outside during the day.",
+  "The fog was so thick that I could barely see a few feet ahead of me.",
+  "The wind was so strong that it blew away my hat while I was walking.",
+  "The hailstorm damaged my car's windshield and left dents on the roof.",
+  "I enjoyed watching the sunset by the beach, with the cool breeze in the air.",
+  "The frost was so heavy that it killed all the plants in my garden.",
+  "I woke up to find a thick layer of frost covering the windows.",
+  "The sudden temperature drop caught me off guard, and I had to rush to get a coat.",
+  "I watched the birds flocking south for the winter, signaling the change in seasons.",
+  "The humidity was so high that my clothes felt damp all day.",
+  "I witnessed a spectacular lightning show during the evening thunderstorm.",
+  "I went for a hike and got caught in a snowstorm in the mountains.",
+  "The weather was perfect for flying a kite, with clear skies and a gentle breeze.",
+  "The heat made the asphalt melt, causing traffic delays and road closures."
+];
+
 export const defaultLocation = {
     "name": "Karimnagar",
     "local_names": {
