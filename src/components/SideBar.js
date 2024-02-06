@@ -5,8 +5,8 @@ import { addLocationDetails } from '../utils/locationSlice'
 
 const SideBar = () => {
     const dispatch = useDispatch()
-    const [searchText,setSearchText] = useState("")
-    const [locationData,setLocationData] = useState(defaultLocation);
+    const [searchText,setSearchText] = useState("karimnagar")
+    const [locationData,setLocationData] = useState({});
 
     const getLocationDetails = async () => {
         const data = await fetch("http://api.openweathermap.org/geo/1.0/direct?q="+searchText+"&limit=5&appid="+API_KEY)
@@ -19,7 +19,7 @@ const SideBar = () => {
     },[searchText])
 
   return (
-    <div className='bg-blue-800 w-80 h-screen'>
+    <div className='w-80 h-screen'>
         <form className='pt-20 pl-6' 
         onSubmit={(e) => {
             e.preventDefault();

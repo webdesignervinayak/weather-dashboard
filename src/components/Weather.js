@@ -1,26 +1,49 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { API_KEY, defaultWeather } from '../utils/constants';
+import { updateWeatherDetails } from '../utils/WeatherSlice';
 
 const Weather = () => {
+    const dispatch = useDispatch();
     const locationDetails = useSelector((store) => store.location.locationDetails);
     const [weatherData,setWeatherData] = useState(defaultWeather);
+    const [currentDateTime,setCurrentDateTime] = useState(new Date());
 
     const {weather,main,wind,sys,visibility} = weatherData;
 
     useEffect( () => {
-        weatherDetails();
+        getweatherDetails();
     },[locationDetails])
 
-    const weatherDetails = async() => {
+    const getweatherDetails = async() => {
         const data = await fetch("https://api.openweathermap.org/data/2.5/weather?lat="+locationDetails.lat+"&lon="+locationDetails.lon+"&appid="+API_KEY+"&units=metric");
         const json = await data.json();
         setWeatherData(json);
+        dispatch(updateWeatherDetails(weatherData));
     }
+
+    useEffect( () => {
+        const i = setInterval(() => {
+            setCurrentDateTime(new Date());
+        },1000);
+
+        return( () => clearInterval(i));
+    },[])
+
+    const currDate = currentDateTime.toLocaleDateString();
+    const currTime = currentDateTime.toLocaleTimeString();
 
   return (
     <div>
-        <div className='border border-white rounded-lg ml-10 mt-20 m-2 w-98'>
+        <div className='mt-10 flex justify-between'>
+            <h1 className='font-bold text-4xl'>{locationDetails.name}</h1>
+            <ul className='font-semibold'>
+                <li>{currDate}</li>
+                <li>{currTime}</li>
+            </ul>
+            
+        </div>
+        <div className='border border-white rounded-lg ml-10 mt-10 m-2 w-98'>
             <div className='flex'>
                 <img src={"https://openweathermap.org/img/wn/"+weather[0]?.icon+"@2x.png" }
                 alt="CloudImage"
