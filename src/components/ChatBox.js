@@ -41,7 +41,7 @@ const ChatBox = () => {
                 <textarea rows="2" placeholder='Type your experience here'
                 onChange={(e) => setMyMessage(e.target.value)}
                 value = {myMessage}
-                className='w-[14.5rem] m-2 p-2 rounded-md'/>
+                className='w-[14.5rem] m-2 p-2 rounded-md outline-none'/>
                 <button className='my-2 px-2 bg-blue-900 text-white rounded-md'>Send</button>
             </form>
         </div>

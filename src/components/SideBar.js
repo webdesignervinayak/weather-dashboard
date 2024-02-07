@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { API_KEY, defaultLocation } from '../utils/constants'
 import { useDispatch } from 'react-redux'
 import { addLocationDetails } from '../utils/locationSlice'
+import { Link } from 'react-router-dom'
 
 const SideBar = () => {
     const dispatch = useDispatch()
-    const [searchText,setSearchText] = useState("karimnagar")
+    const [searchText,setSearchText] = useState("")
     const [locationData,setLocationData] = useState({});
 
     const getLocationDetails = async () => {
@@ -20,7 +21,8 @@ const SideBar = () => {
 
   return (
     <div className='w-76 h-screen'>
-        <form className='pt-20 pl-4' 
+        <h1 className='mx-4 mt-4 mb-10 font-extrabold text-white text-xl'>☁️ Weather DashBoard</h1>
+        <form className='pt-15 pl-4' 
         onSubmit={(e) => {
             e.preventDefault();
             dispatch(addLocationDetails(locationData));
@@ -28,15 +30,16 @@ const SideBar = () => {
             <input type="text" placeholder='Enter your location here'
             onChange={ (e) => setSearchText(e.target.value)}
             value={searchText} 
-            className='m-2 p-2 rounded-lg'/>
+            className='m-2 p-2 rounded-lg outline-none'/>
             <button className='bg-slate-700 bg-opacity-60 p-2 rounded-lg text-white'>Search</button>
         </form>
 
         <div className='pt-10 pl-6'>
+            <Link to="/"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2'>🏠 Home</div></Link>
             <h1 className='text-3xl font-bold p-2 my-2 text-white'>Groups</h1>
-            <div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2'>Farmers</div>
-            <div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2'>Event Planners</div>
-            <div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2'>Travelers</div>
+            <Link to="/farmers"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2'>🌾 Farmers</div></Link>
+            <Link to="/eventplanners"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2'>🪩 Event Planners</div></Link>
+            <Link to="/Travelers"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2'>🚗 Travelers</div></Link>
         </div>
     </div>
   )

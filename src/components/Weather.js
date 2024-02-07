@@ -34,9 +34,9 @@ const Weather = () => {
     const currTime = currentDateTime.toLocaleTimeString();
 
   return (
-    <div>
-        <div className='mt-10 flex justify-between'>
-            <h1 className='font-bold text-4xl'>{locationDetails.name}</h1>
+    <div className='w-[48rem] px-4 text-white'>
+        <div className='mx-4 mt-6 flex justify-between bg-slate-600 opacity-60 rounded-lg p-2'>
+            <h1 className='font-bold text-4xl'>🗺️ {locationDetails.name}</h1>
             <ul className='font-semibold'>
                 <li>{currDate}</li>
                 <li>{currTime}</li>
