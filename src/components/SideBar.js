@@ -19,8 +19,8 @@ const SideBar = () => {
     },[searchText])
 
   return (
-    <div className='w-80 h-screen'>
-        <form className='pt-20 pl-6' 
+    <div className='w-76 h-screen'>
+        <form className='pt-20 pl-4' 
         onSubmit={(e) => {
             e.preventDefault();
             dispatch(addLocationDetails(locationData));
@@ -29,14 +29,14 @@ const SideBar = () => {
             onChange={ (e) => setSearchText(e.target.value)}
             value={searchText} 
             className='m-2 p-2 rounded-lg'/>
-            <button className='bg-gray-400 p-2 rounded-lg'>Search</button>
+            <button className='bg-slate-700 bg-opacity-60 p-2 rounded-lg text-white'>Search</button>
         </form>
 
         <div className='pt-10 pl-6'>
-            <h1 className='text-3xl font-bold p-2 my-2'>Groups</h1>
-            <div className='text-2xl p-4 border border-white rounded-lg mr-3 my-2'>Farmers</div>
-            <div className='text-2xl p-4 border border-white rounded-lg mr-3 my-2'>Event Planners</div>
-            <div className='text-2xl p-4 border border-white rounded-lg mr-3 my-2'>Travelers</div>
+            <h1 className='text-3xl font-bold p-2 my-2 text-white'>Groups</h1>
+            <div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2'>Farmers</div>
+            <div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2'>Event Planners</div>
+            <div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2'>Travelers</div>
         </div>
     </div>
   )

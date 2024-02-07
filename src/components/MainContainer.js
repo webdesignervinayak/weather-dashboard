@@ -3,7 +3,7 @@ import Weather from './Weather';
 
 const MainContainer = () => {
   return (
-    <div className='w-[48rem] px-10 text-white'>
+    <div className='w-[48rem] px-4 text-white'>
         <Weather/>
         <HourlyForecast/>
     </div>

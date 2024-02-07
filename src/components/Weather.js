@@ -9,7 +9,7 @@ const Weather = () => {
     const [weatherData,setWeatherData] = useState(defaultWeather);
     const [currentDateTime,setCurrentDateTime] = useState(new Date());
 
-    const {weather,main,wind,sys,visibility} = weatherData;
+    const {weather,main,wind,visibility} = weatherData;
 
     useEffect( () => {
         getweatherDetails();
@@ -19,7 +19,7 @@ const Weather = () => {
         const data = await fetch("https://api.openweathermap.org/data/2.5/weather?lat="+locationDetails.lat+"&lon="+locationDetails.lon+"&appid="+API_KEY+"&units=metric");
         const json = await data.json();
         setWeatherData(json);
-        dispatch(updateWeatherDetails(weatherData));
+        dispatch(updateWeatherDetails(json));
     }
 
     useEffect( () => {
@@ -43,7 +43,7 @@ const Weather = () => {
             </ul>
             
         </div>
-        <div className='border border-white rounded-lg ml-10 mt-10 m-2 w-98'>
+        <div className='bg-slate-600 bg-opacity-60 rounded-lg ml-6 mt-4 w-98 p-6'>
             <div className='flex'>
                 <img src={"https://openweathermap.org/img/wn/"+weather[0]?.icon+"@2x.png" }
                 alt="CloudImage"
@@ -51,15 +51,15 @@ const Weather = () => {
                 <p className='my-8 text-4xl font-bold'>{Math.round(main.temp)} ℃</p>
                 <ul className='mx-8 mt-8'>
                     <li className=''>{weather[0].main}</li>
-                    <li className=''>{Math.round(main.temp_min)}/{Math.round(main.temp_max)} ℃</li>
+                    <li className=''>Feels like {Math.round(main.feels_like)} ℃</li>
                 </ul>
             </div>
             <p className='mx-8 my-2 text-2xl'>{weather[0].description}</p>
             <div className='m-2 text-sm'>
-                <span className='m-1'>| Visibility : {visibility/1000} Km </span>
-                <span className='m-1'>| Humidity : {main.humidity} % </span>
-                <span className='m-1'>| Pressure: {main.pressure} hpa</span>
-                <span className='m-1'>| Windspeed: {Math.round(wind.speed * 3.6)} kmph</span>
+                <span className='my-1 mx-2'>| Visibility : {visibility/1000} Km </span>
+                <span className='my-1 mx-2'>| Humidity : {main.humidity} % </span>
+                <span className='my-1 mx-2'>| Pressure: {main.pressure} hpa </span>
+                <span className='my-1 mx-2'>| Windspeed: {Math.round(wind.speed * 3.6)} kmph </span>
             </div>
             
         </div>

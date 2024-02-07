@@ -22,12 +22,12 @@ const HourlyForecast = () => {
     },[locationDetails])
 
 
-    console.log(hourlyDetails);
+    //console.log(hourlyDetails);
 
   return (
     <div>
-        <h1 className='mt-8 p-2'>Hourly Forecast</h1>
-        <div className='flex overflow-x-auto scroll'>
+        <h1 className='mt-4 p-2 text-slate-700'>Hourly Forecast</h1>
+        <div className='flex overflow-x-auto no-scrollbar'>
             <div className='flex'>
         {
             hourlyDetails.list.map( (l) => <HourlyForeCastBox key={l.dt} data={l}/> )       
