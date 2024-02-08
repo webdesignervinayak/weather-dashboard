@@ -1,6 +1,6 @@
 export const API_KEY = "7f142b1dd2aaff9096d57b79a77f92aa"
 
-export const OPENAI_KEY = "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"
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY
 
 export const experiences = [
   "I forgot my umbrella and got soaked in the rain on my way to work.",
