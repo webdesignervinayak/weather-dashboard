@@ -40,7 +40,7 @@ const Body = () => {
   }
   const appRouter = createBrowserRouter([
     {
-      path : "/",
+      path : "/weather-dashboard",
       element :<div className='flex'>
         <SideBar/>
         <div>
