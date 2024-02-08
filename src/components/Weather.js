@@ -35,7 +35,7 @@ const Weather = () => {
 
   return (
     <div className='w-[48rem] px-4 text-white'>
-        <div className='mx-4 mt-6 flex justify-between bg-slate-600 opacity-60 rounded-lg p-2'>
+        <div className='mx-4 mt-6 flex justify-between bg-slate-600 opacity-60 rounded-lg p-2 hover:bg-black'>
             <h1 className='font-bold text-4xl'>🗺️ {locationDetails.name}</h1>
             <ul className='font-semibold'>
                 <li>{currDate}</li>
@@ -43,7 +43,7 @@ const Weather = () => {
             </ul>
             
         </div>
-        <div className='bg-slate-600 bg-opacity-60 rounded-lg ml-6 mt-4 w-98 p-6'>
+        <div className='bg-slate-600 bg-opacity-60 rounded-lg ml-6 mt-4 w-98 p-6 hover:bg-black'>
             <div className='flex'>
                 <img src={"https://openweathermap.org/img/wn/"+weather[0]?.icon+"@2x.png" }
                 alt="CloudImage"

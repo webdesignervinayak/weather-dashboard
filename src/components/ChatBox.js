@@ -23,7 +23,7 @@ const ChatBox = () => {
         <div>
             {
                 chatmessages.map((ex,index) =>
-                    <div  key={index} className='bg-slate-100 flex m-1 bg-opacity-80'>
+                    <div  key={index} className='bg-slate-100 flex m-1 bg-opacity-80 hover:bg-white'>
                     <img src="https://png.pngitem.com/pimgs/s/130-1300400_user-hd-png-download.png" alt="user-icon" className='h-12 p-2'/>
                      <p className='p-2 text-sm'>{ex}</p>
                 </div>

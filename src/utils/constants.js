@@ -2,7 +2,7 @@ export const API_KEY = "7f142b1dd2aaff9096d57b79a77f92aa"
 //dc77bed66631bbd5f4eca295653d6787
 //e360fd167170465ed33f81c83808cb54
 
-export const OPENAI_KEY = "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"
+export const OPENAI_KEY = "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"
 
 export const experiences = [
   "I forgot my umbrella and got soaked in the rain on my way to work.",

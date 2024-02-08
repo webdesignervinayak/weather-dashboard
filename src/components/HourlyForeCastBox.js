@@ -18,7 +18,7 @@ const HourlyForeCastBox = ({data}) => {
         },[data])
 
         return (
-            <div className='m-2 px-2 w-48 h-70 bg-slate-600 bg-opacity-60 rounded-lg'>
+            <div className='m-2 px-2 w-48 h-70 bg-slate-600 bg-opacity-60 rounded-lg hover:bg-black'>
             <div className='p-1 text-center'>
                 <p className='border-b-2 pb-1 mx-4 text-sm'>{formattedDate}</p>
                 <p className='border-b-2 pb-1 mx-4 text-sm font-bold'>{formattedTime}</p>

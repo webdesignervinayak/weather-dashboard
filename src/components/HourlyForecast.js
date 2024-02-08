@@ -49,8 +49,8 @@ const HourlyForecast = () => {
         <div className=' flex justify-between w-[46rem]'>
         <h1 className='mt-4 p-2 text-slate-700 font-bold text-2xl'>Hourly Forecast</h1>
         <div className='flex mt-4'>
-                <button className='p-2 mx-2 bg-slate-600 bg-opacity-60 text-white rounded-full' onClick={scrollLeft}>{'<'}</button>
-                <button className='p-2 mx-2 bg-slate-600 bg-opacity-60 text-white rounded-full' onClick={scrollRight}>{'>'}</button>
+                <button className='p-2 mx-2 bg-slate-600 bg-opacity-60 text-white rounded-full hover:bg-black' onClick={scrollLeft}>{'<'}</button>
+                <button className='p-2 mx-2 bg-slate-600 bg-opacity-60 text-white rounded-full hover:bg-black' onClick={scrollRight}>{'>'}</button>
         </div>
         </div>
         <div className='flex overflow-x-scroll no-scrollbar' id="hourly-forecast-container">
