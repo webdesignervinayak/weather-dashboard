@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { API_KEY } from '../utils/constants';
 import { updateHourlyDetails } from '../utils/WeatherSlice';

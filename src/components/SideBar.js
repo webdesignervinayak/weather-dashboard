@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { API_KEY, defaultLocation } from '../utils/constants'
+import { API_KEY } from '../utils/constants'
 import { useDispatch } from 'react-redux'
 import { addLocationDetails } from '../utils/locationSlice'
 import { Link } from 'react-router-dom'
