@@ -10,7 +10,7 @@ const SideBar = () => {
     const [locationData,setLocationData] = useState({});
 
     const getLocationDetails = async () => {
-        const data = await fetch("http://api.openweathermap.org/geo/1.0/direct?q="+searchText+"&limit=5&appid="+API_KEY)
+        const data = await fetch("https://api.openweathermap.org/geo/1.0/direct?q="+searchText+"&limit=5&appid="+API_KEY)
         const json = await data.json()
         setLocationData(json[0]);
     }
