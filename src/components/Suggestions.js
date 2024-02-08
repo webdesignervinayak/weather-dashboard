@@ -9,7 +9,6 @@ const Suggestions = ({name}) => {
     useEffect( () => {
         if(weatherDetails)
         callOpenAiApi(weatherDetails);
-        console.log("GPT API Called");
     },[weatherDetails.name,name])
 
     const callOpenAiApi = async (weatherDetails) =>{
