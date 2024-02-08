@@ -21,7 +21,7 @@ const SideBar = () => {
 
   return (
     <div className='w-76 h-screen'>
-        <Link to="/"><h1 className='mx-4 mt-4 mb-10 font-extrabold text-white text-xl hover:text-black cursor-pointer'>☁️ Weather DashBoard</h1></Link>
+        <Link to="/weather-dashboard"><h1 className='mx-4 mt-4 mb-10 font-extrabold text-white text-xl hover:text-black cursor-pointer'>☁️ Weather DashBoard</h1></Link>
         <form className='pt-15 pl-4' 
         onSubmit={(e) => {
             e.preventDefault();
@@ -35,7 +35,7 @@ const SideBar = () => {
         </form>
 
         <div className='pt-10 pl-6'>
-            <Link to="/"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🏠 Home</div></Link>
+            <Link to="/weather-dashboard"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🏠 Home</div></Link>
             <h1 className='text-3xl font-bold p-2 my-2 text-white'>Groups</h1>
             <Link to="/farmers"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🌾 Farmers</div></Link>
             <Link to="/eventplanners"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🪩 Event Planners</div></Link>
