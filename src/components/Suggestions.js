@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import openai from '../utils/openAi'
 import { useSelector } from 'react-redux'
+import sugg from '../utils/sugg'
 
 const Suggestions = ({name}) => {
     const weatherDetails = useSelector((store) => store.weather.weatherDetails)
@@ -13,7 +14,7 @@ const Suggestions = ({name}) => {
 
     const callOpenAiApi = async (weatherDetails) =>{
             const query = "use the data containing weather details :"+weatherDetails+"make a report of the weather details for"+ name +"in 75 words paragraph,make sure the paragraph contains some weather details like temperature,visibility,wind speed etc.., that data information should be useful to the"+name+"for there daily works"
-            const completion = await openai.chat.completions.create({
+            const completion = await sugg.chat.completions.create({
             messages: [{ role: 'user', content: query }],
             model: 'gpt-3.5-turbo',
         })
