@@ -18,7 +18,7 @@ const ChatBox = () => {
 
   return (
     <div className='mt-20 ml-4'>
-        <p className='border border-white bg-slate-700 bg-opacity-60 text-center p-2 text-white font-semibold rounded-t-lg'>Share Your Experience Here</p>
+        <p className='border border-white bg-slate-900 bg-opacity-60 text-center p-2 text-white font-semibold rounded-t-lg'>Share Your Experience Here</p>
         <div className='w-[18rem] h-[27rem] border border-white overflow-y-scroll flex flex-col-reverse no-scrollbar'>
         <div>
             {

@@ -31,15 +31,15 @@ const SideBar = () => {
             onChange={ (e) => setSearchText(e.target.value)}
             value={searchText} 
             className='m-2 p-2 rounded-lg outline-none'/>
-            <button className='bg-slate-700 bg-opacity-60 p-2 rounded-lg text-white cursor-pointer hover:bg-black'>Search</button>
+            <button className='bg-slate-900 bg-opacity-60 p-2 rounded-lg text-white cursor-pointer hover:bg-black'>Search</button>
         </form>
 
         <div className='pt-10 pl-6'>
-            <Link to="/"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🏠 Home</div></Link>
+            <Link to="/"><div className='text-2xl p-4 bg-slate-900 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🏠 Home</div></Link>
             <h1 className='text-3xl font-bold p-2 my-2 text-white'>Groups</h1>
-            <Link to="/farmers"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🌾 Farmers</div></Link>
-            <Link to="/eventplanners"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🪩 Event Planners</div></Link>
-            <Link to="/Travelers"><div className='text-2xl p-4 bg-slate-700 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🚗 Travelers</div></Link>
+            <Link to="/farmers"><div className='text-2xl p-4 bg-slate-900 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🌾 Farmers</div></Link>
+            <Link to="/eventplanners"><div className='text-2xl p-4 bg-slate-900 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🪩 Event Planners</div></Link>
+            <Link to="/Travelers"><div className='text-2xl p-4 bg-slate-900 bg-opacity-60 text-white rounded-lg mr-3 my-2 hover:bg-black'>🚗 Travelers</div></Link>
         </div>
     </div>
   )

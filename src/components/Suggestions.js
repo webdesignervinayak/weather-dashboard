@@ -23,7 +23,7 @@ const Suggestions = ({name}) => {
 
   return (
     <div className='m-3 w-[48rem] text-white'>
-        <h1 className='text-3xl font-bold text-slate-700'>Suggestions - {name}</h1>
+        <h1 className='text-3xl font-bold text-slate-900'>Suggestions - {name}</h1>
         <div className='bg-slate-700 opacity-70 rounded-lg hover:bg-black'>
         <p className='m-4 p-2 font-bold'>{data}</p>
         </div>
